@@ -1,4 +1,4 @@
-/* Write your T-SQL query statement below */
+# Write your MySQL query statement below
 select 
     w1.id
 from 
@@ -6,6 +6,6 @@ from
 join 
     weather w2
 on 
-    w1.recordDate=DATEADD(day,1,w2.recordDate)
+   DATEDIFF( w1.recordDate,w2.recordDate)=1
 where   
     w1.temperature>w2.temperature;
