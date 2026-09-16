@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-select round(count(a.player_id)/count(*),2) as fraction from (
+select round(count(a.player_id)/count(f.player_id),2) as fraction from (
     select player_id,min(event_date) as firstlog
     from activity group by player_id 
 )f
